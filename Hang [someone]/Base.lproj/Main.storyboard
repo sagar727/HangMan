@@ -1,0 +1,628 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Hang__someone_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Hangman_Start" translatesAutoresizingMaskIntoConstraints="NO" id="0ix-pX-SMr">
+                                <rect key="frame" x="0.0" y="79.000000000000014" width="393" height="220.33333333333337"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HANG[someone]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tph-U4-NZO">
+                                <rect key="frame" x="0.0" y="399.33333333333331" width="393" height="26.333333333333314"/>
+                                <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="center" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="IFH-Rq-LBZ">
+                                <rect key="frame" x="0.0" y="455.66666666666669" width="215.33333333333334" height="89.333333333333314"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="center" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rx3-lG-sse">
+                                        <rect key="frame" x="0.0" y="0.0" width="107.66666666666667" height="89.333333333333329"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WINS: " textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumScaleFactor="1" translatesAutoresizingMaskIntoConstraints="NO" id="pkg-og-1lB" userLabel="WINS:">
+                                                <rect key="frame" x="20" y="33.666666666666629" width="65.666666666666671" height="22.333333333333329"/>
+                                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gkz-5f-2PY">
+                                                <rect key="frame" x="85.666666666666671" y="33.666666666666629" width="14" height="22.333333333333329"/>
+                                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <edgeInsets key="layoutMargins" top="8" left="20" bottom="8" right="8"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="center" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="LDg-SF-fxy">
+                                        <rect key="frame" x="107.66666666666666" y="0.0" width="107.66666666666666" height="89.333333333333329"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOSSES:" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kXc-ew-1fX">
+                                                <rect key="frame" x="20" y="33.666666666666629" width="68.333333333333329" height="22.333333333333329"/>
+                                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KC6-h7-1zE">
+                                                <rect key="frame" x="88.333333333333329" y="33.666666666666629" width="11.333333333333329" height="22.333333333333329"/>
+                                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <edgeInsets key="layoutMargins" top="8" left="20" bottom="8" right="8"/>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="center" misplaced="YES" distribution="fillProportionally" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="4oB-wW-AWy">
+                                <rect key="frame" x="0.0" y="563" width="402" height="50"/>
+                                <subviews>
+                                    <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="rdE-lh-kv4">
+                                        <rect key="frame" x="5" y="5" width="50" height="40"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="H" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xxs-eP-lh8">
+                                                <rect key="frame" x="19" y="8.9999999999999982" width="12" height="22.333333333333329"/>
+                                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="xxs-eP-lh8" firstAttribute="centerY" secondItem="rdE-lh-kv4" secondAttribute="centerY" id="3fC-AJ-LVM"/>
+                                            <constraint firstItem="xxs-eP-lh8" firstAttribute="centerX" secondItem="rdE-lh-kv4" secondAttribute="centerX" id="DmC-jU-xzp"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="CkN-6v-N0c">
+                                        <rect key="frame" x="62" y="5" width="50" height="40"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ftL-73-wcl">
+                                                <rect key="frame" x="18.666666666666671" y="8.9999999999999982" width="12.666666666666664" height="22.333333333333329"/>
+                                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="ftL-73-wcl" firstAttribute="centerY" secondItem="CkN-6v-N0c" secondAttribute="centerY" id="bSq-xl-nS9"/>
+                                            <constraint firstItem="ftL-73-wcl" firstAttribute="centerX" secondItem="CkN-6v-N0c" secondAttribute="centerX" id="dv9-ju-hwZ"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="tYD-W6-BBK">
+                                        <rect key="frame" x="119" y="5" width="50" height="40"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="N" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8z4-vt-TlM">
+                                                <rect key="frame" x="19" y="8.9999999999999982" width="12.333333333333336" height="22.333333333333329"/>
+                                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="8z4-vt-TlM" firstAttribute="centerX" secondItem="tYD-W6-BBK" secondAttribute="centerX" id="0gu-yR-2S0"/>
+                                            <constraint firstItem="8z4-vt-TlM" firstAttribute="centerY" secondItem="tYD-W6-BBK" secondAttribute="centerY" id="vac-jd-ULo"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="Z4Q-nG-rlM">
+                                        <rect key="frame" x="176" y="5" width="50" height="40"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="G" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fyD-Ps-PJ4">
+                                                <rect key="frame" x="19.333333333333343" y="8.9999999999999982" width="11.666666666666664" height="22.333333333333329"/>
+                                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="fyD-Ps-PJ4" firstAttribute="centerY" secondItem="Z4Q-nG-rlM" secondAttribute="centerY" id="7Gi-25-meu"/>
+                                            <constraint firstItem="fyD-Ps-PJ4" firstAttribute="centerX" secondItem="Z4Q-nG-rlM" secondAttribute="centerX" id="CTb-If-bMO"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="gw7-ey-exP">
+                                        <rect key="frame" x="233" y="5" width="50" height="40"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="M" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mBd-5M-Ai5">
+                                                <rect key="frame" x="18.333333333333343" y="8.9999999999999982" width="13.666666666666664" height="22.333333333333329"/>
+                                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="mBd-5M-Ai5" firstAttribute="centerY" secondItem="gw7-ey-exP" secondAttribute="centerY" id="49m-Rm-3k2"/>
+                                            <constraint firstItem="mBd-5M-Ai5" firstAttribute="centerX" secondItem="gw7-ey-exP" secondAttribute="centerX" id="pBV-4k-vmJ"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="ONT-vc-S5I">
+                                        <rect key="frame" x="290" y="5" width="50" height="40"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b5G-ws-0Xq" userLabel="Char Label5">
+                                                <rect key="frame" x="18.666666666666686" y="8.9999999999999982" width="12.666666666666664" height="22.333333333333329"/>
+                                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="b5G-ws-0Xq" firstAttribute="centerX" secondItem="ONT-vc-S5I" secondAttribute="centerX" id="51J-tL-Pvw"/>
+                                            <constraint firstItem="b5G-ws-0Xq" firstAttribute="centerY" secondItem="ONT-vc-S5I" secondAttribute="centerY" id="Q4q-ca-Zcy"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="NBx-g4-fmq">
+                                        <rect key="frame" x="347" y="5" width="50" height="40"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="N" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n9w-lA-0Rj">
+                                                <rect key="frame" x="19" y="8.9999999999999982" width="12.333333333333336" height="22.333333333333329"/>
+                                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="n9w-lA-0Rj" firstAttribute="centerX" secondItem="NBx-g4-fmq" secondAttribute="centerX" id="dyB-Hg-QKt"/>
+                                            <constraint firstItem="n9w-lA-0Rj" firstAttribute="centerY" secondItem="NBx-g4-fmq" secondAttribute="centerY" id="oXE-9T-XR7"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <viewLayoutGuide key="safeArea" id="Fgz-cg-Bla"/>
+                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                <edgeInsets key="layoutMargins" top="5" left="5" bottom="5" right="5"/>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="QRH-HO-J5p">
+                                <rect key="frame" x="0.0" y="663" width="393" height="139"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="doQ-tA-bFE">
+                                        <rect key="frame" x="0.0" y="8" width="393" height="37.666666666666664"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="nIL-nt-PEy">
+                                                <rect key="frame" x="0.0" y="0.0" width="38.333333333333336" height="37.666666666666664"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Q">
+                                                    <fontDescription key="titleFontDescription" name="Thonburi" family="Thonburi" pointSize="18"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J8K-O0-qom"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="5uv-xQ-6VQ">
+                                                <rect key="frame" x="41.333333333333329" y="0.0" width="42.333333333333329" height="37.666666666666664"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="W">
+                                                    <fontDescription key="titleFontDescription" name="Thonburi" family="Thonburi" pointSize="18"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fdf-WF-QUc"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TwQ-Xk-Rux">
+                                                <rect key="frame" x="86.666666666666671" y="0.0" width="35.666666666666671" height="37.666666666666664"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="E">
+                                                    <fontDescription key="titleFontDescription" name="Thonburi" family="Thonburi" pointSize="18"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FsV-5M-qA3"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dhe-bP-Aut">
+                                                <rect key="frame" x="125.33333333333331" y="0.0" width="36" height="37.666666666666664"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="R">
+                                                    <fontDescription key="titleFontDescription" name="Thonburi" family="Thonburi" pointSize="18"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hab-dZ-8Uh"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Nv-9R-qOt">
+                                                <rect key="frame" x="164.33333333333334" y="0.0" width="36.666666666666657" height="37.666666666666664"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="T">
+                                                    <fontDescription key="titleFontDescription" name="Thonburi" family="Thonburi" pointSize="18"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WJZ-hi-ZXg"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lzr-Oh-5I3">
+                                                <rect key="frame" x="204" y="0.0" width="36" height="37.666666666666664"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Y">
+                                                    <fontDescription key="titleFontDescription" name="Thonburi" family="Thonburi" pointSize="18"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kk9-7k-ePC"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rKu-W5-kDE">
+                                                <rect key="frame" x="243" y="0.0" width="37" height="37.666666666666664"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="U">
+                                                    <fontDescription key="titleFontDescription" name="Thonburi" family="Thonburi" pointSize="18"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SEy-jo-5rg"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YAE-1r-Pda">
+                                                <rect key="frame" x="283" y="0.0" width="29.333333333333314" height="37.666666666666664"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="I">
+                                                    <fontDescription key="titleFontDescription" name="Thonburi" family="Thonburi" pointSize="18"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tUw-wP-tFR"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7pi-qu-mSH">
+                                                <rect key="frame" x="315.33333333333331" y="0.0" width="38.333333333333314" height="37.666666666666664"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="O">
+                                                    <fontDescription key="titleFontDescription" name="Thonburi" family="Thonburi" pointSize="18"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D7A-EU-p5E"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zMS-w7-Jq1">
+                                                <rect key="frame" x="356.66666666666669" y="0.0" width="36.333333333333314" height="37.666666666666664"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="P">
+                                                    <fontDescription key="titleFontDescription" name="Thonburi" family="Thonburi" pointSize="18"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UO4-FU-IHo"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="ePu-IN-J02">
+                                        <rect key="frame" x="0.0" y="50.666666666666629" width="393" height="37.666666666666657"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ys6-lB-52x">
+                                                <rect key="frame" x="0.0" y="0.0" width="42.666666666666664" height="37.666666666666664"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="A">
+                                                    <fontDescription key="titleFontDescription" name="Thonburi" family="Thonburi" pointSize="18"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="saq-0h-Pc7"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofE-rx-S7g">
+                                                <rect key="frame" x="45.666666666666657" y="0.0" width="40" height="37.666666666666664"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="S">
+                                                    <fontDescription key="titleFontDescription" name="Thonburi" family="Thonburi" pointSize="18"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RBi-lq-gVZ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wtH-Zc-bfv">
+                                                <rect key="frame" x="88.666666666666671" y="0.0" width="42.000000000000014" height="37.666666666666664"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="D">
+                                                    <fontDescription key="titleFontDescription" name="Thonburi" family="Thonburi" pointSize="18"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="32L-wC-8DG"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yFJ-f7-fKv">
+                                                <rect key="frame" x="133.66666666666666" y="0.0" width="39" height="37.666666666666664"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="F">
+                                                    <fontDescription key="titleFontDescription" name="Thonburi" family="Thonburi" pointSize="18"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5sj-z4-mf4"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nLM-ge-AAW">
+                                                <rect key="frame" x="175.66666666666666" y="0.0" width="41.333333333333343" height="37.666666666666664"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="G">
+                                                    <fontDescription key="titleFontDescription" name="Thonburi" family="Thonburi" pointSize="18"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uy9-vJ-OdV"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z8Y-fI-vTz">
+                                                <rect key="frame" x="220" y="0.0" width="42" height="37.666666666666664"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="H">
+                                                    <fontDescription key="titleFontDescription" name="Thonburi" family="Thonburi" pointSize="18"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B2O-LR-oBo"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7wg-qZ-8T9">
+                                                <rect key="frame" x="265" y="0.0" width="37.666666666666686" height="37.666666666666664"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="J">
+                                                    <fontDescription key="titleFontDescription" name="Thonburi" family="Thonburi" pointSize="18"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dZX-rY-2Cb"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WcN-rH-iqw">
+                                                <rect key="frame" x="305.66666666666669" y="0.0" width="41.333333333333314" height="37.666666666666664"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="K">
+                                                    <fontDescription key="titleFontDescription" name="Thonburi" family="Thonburi" pointSize="18"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H1J-iv-R1S"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j81-cC-8oO">
+                                                <rect key="frame" x="350" y="0.0" width="43" height="37.666666666666664"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="L">
+                                                    <fontDescription key="titleFontDescription" name="Thonburi" family="Thonburi" pointSize="18"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GTn-4h-kz2"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="8uv-8h-I10">
+                                        <rect key="frame" x="0.0" y="93.333333333333371" width="393" height="37.666666666666657"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0mS-ON-hbc">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="37.666666666666664"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Z">
+                                                    <fontDescription key="titleFontDescription" name="Thonburi" family="Thonburi" pointSize="18"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="be5-6e-aa0"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kp2-rm-4GZ">
+                                                <rect key="frame" x="53" y="0.0" width="50.666666666666657" height="37.666666666666664"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="X">
+                                                    <fontDescription key="titleFontDescription" name="Thonburi" family="Thonburi" pointSize="18"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lAu-31-MyW"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UIu-Sh-LCG">
+                                                <rect key="frame" x="106.66666666666669" y="0.0" width="52" height="37.666666666666664"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="C">
+                                                    <fontDescription key="titleFontDescription" name="Thonburi" family="Thonburi" pointSize="18"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Xg-xJ-ead"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Adm-Ww-0Js">
+                                                <rect key="frame" x="161.66666666666666" y="0.0" width="54" height="37.666666666666664"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="V">
+                                                    <fontDescription key="titleFontDescription" name="Thonburi" family="Thonburi" pointSize="18"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FCz-dQ-KO0"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8oK-UR-san">
+                                                <rect key="frame" x="218.66666666666666" y="0.0" width="51.333333333333343" height="37.666666666666664"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="B">
+                                                    <fontDescription key="titleFontDescription" name="Thonburi" family="Thonburi" pointSize="18"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="15Y-ax-9Ac"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PKq-4b-9ib">
+                                                <rect key="frame" x="273" y="0.0" width="53.666666666666686" height="37.666666666666664"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="N">
+                                                    <fontDescription key="titleFontDescription" name="Thonburi" family="Thonburi" pointSize="18"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c36-L0-oe8"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DOf-qH-WA3">
+                                                <rect key="frame" x="329.66666666666669" y="0.0" width="63.333333333333314" height="37.666666666666664"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="M">
+                                                    <fontDescription key="titleFontDescription" name="Thonburi" family="Thonburi" pointSize="18"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aqt-f6-HfC"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <viewLayoutGuide key="safeArea" id="lh2-rI-1cF"/>
+                                <color key="backgroundColor" systemColor="tintColor"/>
+                                <edgeInsets key="layoutMargins" top="8" left="0.0" bottom="8" right="0.0"/>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.63911208285010612" green="1" blue="0.97782295609966718" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="IFH-Rq-LBZ" secondAttribute="bottom" constant="306.99999999999989" id="4H0-zL-0Yg"/>
+                            <constraint firstItem="IFH-Rq-LBZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4jO-u1-kbU"/>
+                            <constraint firstItem="IFH-Rq-LBZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9hQ-hT-UOA"/>
+                            <constraint firstItem="QRH-HO-J5p" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9x3-ol-mQ9"/>
+                            <constraint firstItem="0ix-pX-SMr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9yd-H1-nVd"/>
+                            <constraint firstItem="IFH-Rq-LBZ" firstAttribute="top" secondItem="tph-U4-NZO" secondAttribute="bottom" constant="30.000000000000057" id="DxK-4i-6pj"/>
+                            <constraint firstAttribute="trailing" secondItem="QRH-HO-J5p" secondAttribute="trailing" id="I3v-C2-hRX"/>
+                            <constraint firstItem="QRH-HO-J5p" firstAttribute="top" secondItem="4oB-wW-AWy" secondAttribute="bottom" constant="50" id="Ijg-SC-0KJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4oB-wW-AWy" secondAttribute="trailing" constant="-25" id="LUu-Zk-Etq"/>
+                            <constraint firstItem="0ix-pX-SMr" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="d1J-8N-NT9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IFH-Rq-LBZ" secondAttribute="trailing" id="ek6-Ox-F70"/>
+                            <constraint firstItem="tph-U4-NZO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="gC9-Gl-Ucy"/>
+                            <constraint firstItem="4oB-wW-AWy" firstAttribute="top" secondItem="IFH-Rq-LBZ" secondAttribute="bottom" constant="18" id="ieZ-OG-8uW"/>
+                            <constraint firstItem="tph-U4-NZO" firstAttribute="top" secondItem="0ix-pX-SMr" secondAttribute="bottom" constant="100" id="nk0-hs-fik"/>
+                            <constraint firstAttribute="bottom" secondItem="QRH-HO-J5p" secondAttribute="bottom" constant="50" id="nn8-hW-HoV"/>
+                            <constraint firstItem="4oB-wW-AWy" firstAttribute="leading" secondItem="IFH-Rq-LBZ" secondAttribute="leading" id="sZp-fB-sLa"/>
+                            <constraint firstItem="0ix-pX-SMr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="sse-nj-P38"/>
+                            <constraint firstItem="tph-U4-NZO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tsO-1T-5CW"/>
+                            <constraint firstItem="tph-U4-NZO" firstAttribute="top" secondItem="0ix-pX-SMr" secondAttribute="bottom" constant="100" id="xam-tZ-zB4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="charLabel0" destination="xxs-eP-lh8" id="yNJ-ey-ugb"/>
+                        <outlet property="charLabel1" destination="ftL-73-wcl" id="awt-an-CgD"/>
+                        <outlet property="charLabel2" destination="8z4-vt-TlM" id="MD3-Kw-hbQ"/>
+                        <outlet property="charLabel3" destination="fyD-Ps-PJ4" id="lBB-Qe-SoE"/>
+                        <outlet property="charLabel4" destination="mBd-5M-Ai5" id="ecq-OZ-NeZ"/>
+                        <outlet property="charLabel5" destination="b5G-ws-0Xq" id="VUm-hn-KOW"/>
+                        <outlet property="charLabel6" destination="n9w-lA-0Rj" id="GUv-vL-xcd"/>
+                        <outlet property="hangImage" destination="0ix-pX-SMr" id="P4o-V1-5CP"/>
+                        <outlet property="lossLabel" destination="KC6-h7-1zE" id="zeG-eC-bBp"/>
+                        <outlet property="winLabel" destination="Gkz-5f-2PY" id="F45-8L-fd9"/>
+                        <outletCollection property="buttonCollection" destination="nIL-nt-PEy" collectionClass="NSMutableArray" id="Suk-cp-SHV"/>
+                        <outletCollection property="buttonCollection" destination="5uv-xQ-6VQ" collectionClass="NSMutableArray" id="u6P-JD-yER"/>
+                        <outletCollection property="buttonCollection" destination="TwQ-Xk-Rux" collectionClass="NSMutableArray" id="pDQ-xv-5Eu"/>
+                        <outletCollection property="buttonCollection" destination="Dhe-bP-Aut" collectionClass="NSMutableArray" id="izK-ku-hAQ"/>
+                        <outletCollection property="buttonCollection" destination="6Nv-9R-qOt" collectionClass="NSMutableArray" id="JRP-sH-rna"/>
+                        <outletCollection property="buttonCollection" destination="Lzr-Oh-5I3" collectionClass="NSMutableArray" id="Cxt-Sw-lm3"/>
+                        <outletCollection property="buttonCollection" destination="rKu-W5-kDE" collectionClass="NSMutableArray" id="b98-ZD-ad1"/>
+                        <outletCollection property="buttonCollection" destination="YAE-1r-Pda" collectionClass="NSMutableArray" id="2iv-HR-1Gc"/>
+                        <outletCollection property="buttonCollection" destination="7pi-qu-mSH" collectionClass="NSMutableArray" id="YOR-ah-tcj"/>
+                        <outletCollection property="buttonCollection" destination="zMS-w7-Jq1" collectionClass="NSMutableArray" id="cd0-2q-qxZ"/>
+                        <outletCollection property="buttonCollection" destination="ys6-lB-52x" collectionClass="NSMutableArray" id="Gsa-sh-SrU"/>
+                        <outletCollection property="buttonCollection" destination="ofE-rx-S7g" collectionClass="NSMutableArray" id="0Sq-vd-zNA"/>
+                        <outletCollection property="buttonCollection" destination="wtH-Zc-bfv" collectionClass="NSMutableArray" id="2Cz-zz-dNq"/>
+                        <outletCollection property="buttonCollection" destination="yFJ-f7-fKv" collectionClass="NSMutableArray" id="ktq-Vg-Le9"/>
+                        <outletCollection property="buttonCollection" destination="nLM-ge-AAW" collectionClass="NSMutableArray" id="Dad-45-cIZ"/>
+                        <outletCollection property="buttonCollection" destination="z8Y-fI-vTz" collectionClass="NSMutableArray" id="fcD-xO-4w1"/>
+                        <outletCollection property="buttonCollection" destination="7wg-qZ-8T9" collectionClass="NSMutableArray" id="zmP-gV-cRw"/>
+                        <outletCollection property="buttonCollection" destination="WcN-rH-iqw" collectionClass="NSMutableArray" id="3Nj-5a-TTp"/>
+                        <outletCollection property="buttonCollection" destination="j81-cC-8oO" collectionClass="NSMutableArray" id="ITp-Ui-xCK"/>
+                        <outletCollection property="buttonCollection" destination="0mS-ON-hbc" collectionClass="NSMutableArray" id="i1y-eS-fJ3"/>
+                        <outletCollection property="buttonCollection" destination="kp2-rm-4GZ" collectionClass="NSMutableArray" id="abA-1z-ivG"/>
+                        <outletCollection property="buttonCollection" destination="UIu-Sh-LCG" collectionClass="NSMutableArray" id="Nj1-qn-Zm5"/>
+                        <outletCollection property="buttonCollection" destination="Adm-Ww-0Js" collectionClass="NSMutableArray" id="CXo-uq-G5d"/>
+                        <outletCollection property="buttonCollection" destination="8oK-UR-san" collectionClass="NSMutableArray" id="YpD-rz-wHC"/>
+                        <outletCollection property="buttonCollection" destination="PKq-4b-9ib" collectionClass="NSMutableArray" id="gqy-gm-mpU"/>
+                        <outletCollection property="buttonCollection" destination="DOf-qH-WA3" collectionClass="NSMutableArray" id="iWe-er-Wsv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="70.992366412213741" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Hangman_Start" width="306.66665649414062" height="220.33332824707031"/>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
